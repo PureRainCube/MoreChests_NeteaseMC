@@ -1,0 +1,29 @@
+{
+  "format_version": 1,
+  "header": {
+    "description": "更多箱子 —— Iron Chests 的网易我的世界基岩版实现 — 行为包",
+    "name": "更多箱子 MoreChests",
+    "min_engine_version": [
+      1,
+      18,
+      0
+    ],
+    "uuid": "f42b8eb4-03fe-4d1f-bbb9-c0b60801dc1d",
+    "version": [
+      1,
+      0,
+      0
+    ]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "70d3b6e7-e0c7-423c-8d6d-31e083b72319",
+      "version": [
+        1,
+        0,
+        0
+      ]
+    }
+  ]
+}

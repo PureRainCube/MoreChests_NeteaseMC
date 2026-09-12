@@ -1,0 +1,13 @@
+{
+  "format_version": "1.10",
+  "minecraft:item": {
+    "description": {
+      "identifier": "purerain_chests:wood_to_iron_chest_upgrade",
+      "category": "purerain_morechests",
+      "register_to_create_menu": true
+    },
+    "components": {
+      "minecraft:icon": "purerain_chests:wood_to_iron_chest_upgrade"
+    }
+  }
+}

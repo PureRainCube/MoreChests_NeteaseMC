@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "purerain_chests:gold_chest_from_iron"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "MMM",
+      "MSM",
+      "MMM"
+    ],
+    "key": {
+      "M": {
+        "item": "minecraft:gold_ingot"
+      },
+      "S": {
+        "item": "purerain_chests:iron_chest"
+      }
+    },
+    "result": {
+      "item": "purerain_chests:gold_chest",
+      "count": 1
+    }
+  }
+}

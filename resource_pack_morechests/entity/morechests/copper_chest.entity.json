@@ -1,0 +1,33 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "purerain_chests:copper_chest",
+      "materials": {
+        "default": "entity_alphatest"
+      },
+      "textures": {
+        "default": "textures/blocks/morechests/copper_chest"
+      },
+      "geometry": {
+        "default": "geometry.purerain_chests.copper_chest"
+      },
+      "animations": {
+        "closed": "animation.purerain_chests.chest.closed",
+        "open": "animation.purerain_chests.chest.open",
+        "lid_controller": "controller.animation.purerain_chests.chest"
+      },
+      "scripts": {
+        "initialize": [
+          "variable.chest_open = 0.0;"
+        ],
+        "animate": [
+          "lid_controller"
+        ]
+      },
+      "render_controllers": [
+        "controller.render.purerain_chests.chest"
+      ]
+    }
+  }
+}

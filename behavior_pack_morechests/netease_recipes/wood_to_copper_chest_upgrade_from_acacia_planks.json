@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "purerain_chests:wood_to_copper_chest_upgrade_from_acacia_planks"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "MMM",
+      "MPM",
+      "MMM"
+    ],
+    "key": {
+      "M": {
+        "item": "minecraft:copper_ingot"
+      },
+      "P": {
+        "item": "minecraft:acacia_planks"
+      }
+    },
+    "result": {
+      "item": "purerain_chests:wood_to_copper_chest_upgrade",
+      "count": 1
+    }
+  }
+}

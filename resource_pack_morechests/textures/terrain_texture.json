@@ -1,0 +1,90 @@
+{
+  "resource_pack_name": "morechests",
+  "texture_name": "atlas.terrain",
+  "texture_data": {
+    "purerain_chests:copper_chest_tex": {
+      "textures": "textures/blocks/morechests/copper_chest"
+    },
+    "purerain_chests:copper_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/copper_chest"
+    },
+    "purerain_chests:iron_chest_tex": {
+      "textures": "textures/blocks/morechests/iron_chest"
+    },
+    "purerain_chests:iron_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/iron_chest"
+    },
+    "purerain_chests:gold_chest_tex": {
+      "textures": "textures/blocks/morechests/gold_chest"
+    },
+    "purerain_chests:gold_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/gold_chest"
+    },
+    "purerain_chests:diamond_chest_tex": {
+      "textures": "textures/blocks/morechests/diamond_chest"
+    },
+    "purerain_chests:diamond_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/diamond_chest"
+    },
+    "purerain_chests:crystal_chest_tex": {
+      "textures": "textures/blocks/morechests/crystal_chest"
+    },
+    "purerain_chests:crystal_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/crystal_chest"
+    },
+    "purerain_chests:obsidian_chest_tex": {
+      "textures": "textures/blocks/morechests/obsidian_chest"
+    },
+    "purerain_chests:obsidian_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/obsidian_chest"
+    },
+    "purerain_chests:dirt_chest_tex": {
+      "textures": "textures/blocks/morechests/dirt_chest"
+    },
+    "purerain_chests:dirt_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/dirt_chest"
+    },
+    "purerain_chests:trapped_copper_chest_tex": {
+      "textures": "textures/blocks/morechests/trapped_copper_chest"
+    },
+    "purerain_chests:trapped_copper_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/trapped_copper_chest"
+    },
+    "purerain_chests:trapped_iron_chest_tex": {
+      "textures": "textures/blocks/morechests/trapped_iron_chest"
+    },
+    "purerain_chests:trapped_iron_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/trapped_iron_chest"
+    },
+    "purerain_chests:trapped_gold_chest_tex": {
+      "textures": "textures/blocks/morechests/trapped_gold_chest"
+    },
+    "purerain_chests:trapped_gold_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/trapped_gold_chest"
+    },
+    "purerain_chests:trapped_diamond_chest_tex": {
+      "textures": "textures/blocks/morechests/trapped_diamond_chest"
+    },
+    "purerain_chests:trapped_diamond_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/trapped_diamond_chest"
+    },
+    "purerain_chests:trapped_crystal_chest_tex": {
+      "textures": "textures/blocks/morechests/trapped_crystal_chest"
+    },
+    "purerain_chests:trapped_crystal_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/trapped_crystal_chest"
+    },
+    "purerain_chests:trapped_obsidian_chest_tex": {
+      "textures": "textures/blocks/morechests/trapped_obsidian_chest"
+    },
+    "purerain_chests:trapped_obsidian_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/trapped_obsidian_chest"
+    },
+    "purerain_chests:trapped_dirt_chest_tex": {
+      "textures": "textures/blocks/morechests/trapped_dirt_chest"
+    },
+    "purerain_chests:trapped_dirt_chest_icon": {
+      "textures": "textures/blocks/morechests/icon/trapped_dirt_chest"
+    }
+  }
+}

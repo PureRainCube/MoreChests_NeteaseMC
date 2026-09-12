@@ -1,0 +1,84 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:block": {
+    "description": {
+      "identifier": "purerain_chests:trapped_diamond_chest_on",
+      "category": "purerain_morechests",
+      "register_to_creative_menu": false
+    },
+    "components": {
+      "minecraft:destroy_time": {
+        "value": 3.0
+      },
+      "minecraft:explosion_resistance": {
+        "value": 15.0
+      },
+      "minecraft:block_light_absorption": {
+        "value": 0
+      },
+      "minecraft:block_light_emission": {
+        "emission": 0.0
+      },
+      "minecraft:map_color": {
+        "color": "#4ee1d5"
+      },
+      "netease:aabb": {
+        "clip": {
+          "min": [
+            0.0625,
+            0.0,
+            0.0625
+          ],
+          "max": [
+            0.9375,
+            0.875,
+            0.9375
+          ]
+        },
+        "collision": {
+          "min": [
+            0.0625,
+            0.0,
+            0.0625
+          ],
+          "max": [
+            0.9375,
+            0.875,
+            0.9375
+          ]
+        }
+      },
+      "netease:face_directional": {
+        "type": "direction"
+      },
+      "netease:block_entity": {
+        "tick": false,
+        "movable": false
+      },
+      "netease:redstone_property": {
+        "value": "break_on_push"
+      },
+      "netease:listen_block_remove": {
+        "value": true
+      },
+      "netease:solid": {
+        "value": false
+      },
+      "netease:pathable": {
+        "value": false
+      },
+      "netease:render_layer": {
+        "value": "opaque"
+      },
+      "netease:tier": {
+        "digger": "pickaxe",
+        "destroy_special": false,
+        "level": 0
+      },
+      "netease:redstone": {
+        "type": "producer",
+        "strength": 15
+      }
+    }
+  }
+}

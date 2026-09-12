@@ -1,0 +1,5413 @@
+{
+  "namespace": "pureRainChestsUI",
+  "panel_open_alpha": {
+    "anim_type": "alpha",
+    "duration": 0.12,
+    "from": 0.0,
+    "to": 1.0
+  },
+  "panel_open_offset": {
+    "anim_type": "offset",
+    "duration": 0.12,
+    "from": [
+      0,
+      14
+    ],
+    "to": [
+      0,
+      0
+    ]
+  },
+  "item_layer@common.item_renderer_additional_layer": {
+    "bindings": [
+      {
+        "binding_name": "#visible",
+        "binding_condition": "always"
+      },
+      {
+        "binding_name": "#uv",
+        "binding_condition": "always_when_visible"
+      },
+      {
+        "binding_name": "#uv_size",
+        "binding_condition": "always_when_visible"
+      },
+      {
+        "binding_name": "#texture",
+        "binding_condition": "always_when_visible"
+      }
+    ]
+  },
+  "item_num": {
+    "type": "label",
+    "anchor_from": "bottom_right",
+    "anchor_to": "bottom_right",
+    "offset": [
+      1,
+      1
+    ],
+    "size": [
+      "100%",
+      "50%"
+    ],
+    "layer": 8,
+    "font_size": "small",
+    "font_type": "smooth",
+    "text_alignment": "right",
+    "shadow": true,
+    "text": ""
+  },
+  "item_img": {
+    "type": "custom",
+    "renderer": "inventory_item_renderer",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": [
+      0,
+      0
+    ],
+    "$item_img_size|default": [
+      16,
+      16
+    ],
+    "size": "$item_img_size",
+    "layer": 5,
+    "visible": false,
+    "controls": [
+      {
+        "top_layer_3@pureRainChestsUI.item_layer": {
+          "$item_renderer_additional_layer_layer": 3
+        }
+      },
+      {
+        "top_layer_2@pureRainChestsUI.item_layer": {
+          "$item_renderer_additional_layer_layer": 2
+        }
+      },
+      {
+        "top_layer_1@pureRainChestsUI.item_layer": {
+          "$item_renderer_additional_layer_layer": 1
+        }
+      },
+      {
+        "bottom_layer_1@pureRainChestsUI.item_layer": {
+          "$item_renderer_additional_layer_layer": -1
+        }
+      },
+      {
+        "bottom_layer_2@pureRainChestsUI.item_layer": {
+          "$item_renderer_additional_layer_layer": -2
+        }
+      },
+      {
+        "itemNum@pureRainChestsUI.item_num": {}
+      }
+    ]
+  },
+  "slot_button": {
+    "type": "button",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$item_slot_size|default": [
+      18,
+      18
+    ],
+    "size": "$item_slot_size",
+    "layer": 20,
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "$item_slot_offset|default": [
+      0,
+      0
+    ],
+    "offset": "$item_slot_offset",
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "controls": [
+      {
+        "default": {
+          "type": "image",
+          "texture": "textures/ui/morechests/slot",
+          "keep_ratio": false,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "hover": {
+          "type": "image",
+          "texture": "textures/ui/morechests/slot_hover",
+          "keep_ratio": false,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "pressed": {
+          "type": "image",
+          "texture": "textures/ui/morechests/slot_hover",
+          "keep_ratio": false,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 2
+        }
+      },
+      {
+        "selected": {
+          "type": "image",
+          "texture": "textures/ui/morechests/slot_selected",
+          "keep_ratio": false,
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [
+            "100%+4px",
+            "100%+4px"
+          ],
+          "layer": 3,
+          "visible": false
+        }
+      },
+      {
+        "itemImg@pureRainChestsUI.item_img": {}
+      }
+    ]
+  },
+  "text_button": {
+    "type": "button",
+    "anchor_from": "top_left",
+    "anchor_to": "top_left",
+    "$btn_text|default": "",
+    "$btn_offset|default": [
+      0,
+      0
+    ],
+    "size": [
+      52,
+      22
+    ],
+    "offset": "$btn_offset",
+    "layer": 20,
+    "sound_name": "random.click",
+    "sound_volume": 1.0,
+    "sound_pitch": 1.0,
+    "default_control": "default",
+    "hover_control": "hover",
+    "pressed_control": "pressed",
+    "controls": [
+      {
+        "default": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "plate": {
+                "type": "image",
+                "texture": "textures/ui/morechests/btn",
+                "keep_ratio": false,
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "layer": 21,
+                "nineslice_size": 4
+              }
+            },
+            {
+              "caption": {
+                "type": "label",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "layer": 24,
+                "font_size": "normal",
+                "font_type": "smooth",
+                "text_alignment": "center",
+                "shadow": false,
+                "color": [
+                  0.1,
+                  0.1,
+                  0.1
+                ],
+                "text": "$btn_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "hover": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "plate": {
+                "type": "image",
+                "texture": "textures/ui/morechests/btn_hover",
+                "keep_ratio": false,
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "layer": 21,
+                "nineslice_size": 4
+              }
+            },
+            {
+              "caption": {
+                "type": "label",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  0
+                ],
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "layer": 24,
+                "font_size": "normal",
+                "font_type": "smooth",
+                "text_alignment": "center",
+                "shadow": false,
+                "color": [
+                  0.1,
+                  0.1,
+                  0.1
+                ],
+                "text": "$btn_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "pressed": {
+          "type": "panel",
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "controls": [
+            {
+              "plate": {
+                "type": "image",
+                "texture": "textures/ui/morechests/btn_pressed",
+                "keep_ratio": false,
+                "size": [
+                  "100%",
+                  "100%"
+                ],
+                "layer": 21,
+                "nineslice_size": 4
+              }
+            },
+            {
+              "caption": {
+                "type": "label",
+                "anchor_from": "center",
+                "anchor_to": "center",
+                "offset": [
+                  0,
+                  1
+                ],
+                "size": [
+                  "100%",
+                  "default"
+                ],
+                "layer": 24,
+                "font_size": "normal",
+                "font_type": "smooth",
+                "text_alignment": "center",
+                "shadow": false,
+                "color": [
+                  0.1,
+                  0.1,
+                  0.1
+                ],
+                "text": "$btn_text"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "on": {
+          "type": "image",
+          "texture": "textures/ui/morechests/btn_on",
+          "keep_ratio": false,
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 23,
+          "nineslice_size": 4,
+          "visible": false
+        }
+      }
+    ]
+  },
+  "panel_chest_1": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": "@panel_open_offset",
+    "alpha": "@panel_open_alpha",
+    "size": [
+      414,
+      152
+    ],
+    "layer": 10,
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "textures/ui/morechests/panel_bg",
+          "nineslice_size": 4,
+          "keep_ratio": false,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            414,
+            152
+          ],
+          "layer": 11
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            10
+          ],
+          "size": [
+            414,
+            14
+          ],
+          "layer": 22,
+          "font_size": "large",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "text": ""
+        }
+      },
+      {
+        "status": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10,
+            12
+          ],
+          "size": [
+            138,
+            10
+          ],
+          "layer": 22,
+          "font_size": "small",
+          "font_type": "smooth",
+          "text_alignment": "left",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": ""
+        }
+      },
+      {
+        "inv_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            101,
+            28
+          ],
+          "size": [
+            162,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.inventory"
+        }
+      },
+      {
+        "chest_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            277,
+            46
+          ],
+          "size": [
+            36,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.dirt_only"
+        }
+      },
+      {
+        "inv_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  101,
+                  40
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  119,
+                  40
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  137,
+                  40
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  155,
+                  40
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  173,
+                  40
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  191,
+                  40
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  209,
+                  40
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  227,
+                  40
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  245,
+                  40
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  101,
+                  58
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  119,
+                  58
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  137,
+                  58
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  155,
+                  58
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  173,
+                  58
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  191,
+                  58
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  209,
+                  58
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  227,
+                  58
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  245,
+                  58
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  101,
+                  76
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  119,
+                  76
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  137,
+                  76
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  155,
+                  76
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  173,
+                  76
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  191,
+                  76
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  209,
+                  76
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  227,
+                  76
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  245,
+                  76
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  101,
+                  94
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  119,
+                  94
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  137,
+                  94
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  155,
+                  94
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  173,
+                  94
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  191,
+                  94
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  209,
+                  94
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  227,
+                  94
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  245,
+                  94
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chest_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  58
+                ],
+                "$item_slot_size": [
+                  36,
+                  36
+                ],
+                "$item_img_size": [
+                  32,
+                  32
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "quick_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.quick",
+          "$btn_offset": [
+            10,
+            120
+          ]
+        }
+      },
+      {
+        "split_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.split",
+          "$btn_offset": [
+            67,
+            120
+          ]
+        }
+      },
+      {
+        "store_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.store",
+          "$btn_offset": [
+            124,
+            120
+          ]
+        }
+      },
+      {
+        "sort_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.sort",
+          "$btn_offset": [
+            181,
+            120
+          ]
+        }
+      },
+      {
+        "take_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.take",
+          "$btn_offset": [
+            238,
+            120
+          ]
+        }
+      },
+      {
+        "drop_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.drop",
+          "$btn_offset": [
+            295,
+            120
+          ]
+        }
+      },
+      {
+        "close_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.close",
+          "$btn_offset": [
+            352,
+            120
+          ]
+        }
+      }
+    ]
+  },
+  "content_chest_1": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "morechests_panel@pureRainChestsUI.panel_chest_1": {}
+      }
+    ]
+  },
+  "main_chest_1@common.base_screen": {
+    "$screen_content": "pureRainChestsUI.content_chest_1",
+    "is_showing_menu": true,
+    "absorbs_input": true,
+    "should_steal_mouse": true,
+    "render_game_behind": true,
+    "force_render_below": true
+  },
+  "panel_chest_45": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": "@panel_open_offset",
+    "alpha": "@panel_open_alpha",
+    "size": [
+      414,
+      170
+    ],
+    "layer": 10,
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "textures/ui/morechests/panel_bg",
+          "nineslice_size": 4,
+          "keep_ratio": false,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            414,
+            170
+          ],
+          "layer": 11
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            10
+          ],
+          "size": [
+            414,
+            14
+          ],
+          "layer": 22,
+          "font_size": "large",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "text": ""
+        }
+      },
+      {
+        "status": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10,
+            12
+          ],
+          "size": [
+            138,
+            10
+          ],
+          "layer": 22,
+          "font_size": "small",
+          "font_type": "smooth",
+          "text_alignment": "left",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": ""
+        }
+      },
+      {
+        "inv_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            38,
+            37
+          ],
+          "size": [
+            162,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.inventory"
+        }
+      },
+      {
+        "chest_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            214,
+            28
+          ],
+          "size": [
+            162,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.chest"
+        }
+      },
+      {
+        "inv_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  49
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  49
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  49
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  49
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  49
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  49
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  49
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  49
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  49
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  67
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  67
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  67
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  67
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  67
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  67
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  67
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  67
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  67
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  85
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  85
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  85
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  85
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  85
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  85
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  85
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  85
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  85
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  103
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  103
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  103
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  103
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  103
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  103
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  103
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  103
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  103
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chest_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  40
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  40
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  40
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  40
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  40
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  40
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  40
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  40
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  40
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  58
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  58
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  58
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  58
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  58
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  58
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  58
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  58
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  58
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  76
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  76
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  76
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  76
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  76
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  76
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  76
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  76
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  76
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  94
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  94
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  94
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  94
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  94
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  94
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  94
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  94
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  94
+                ]
+              }
+            },
+            {
+              "slot36@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  112
+                ]
+              }
+            },
+            {
+              "slot37@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  112
+                ]
+              }
+            },
+            {
+              "slot38@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  112
+                ]
+              }
+            },
+            {
+              "slot39@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  112
+                ]
+              }
+            },
+            {
+              "slot40@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  112
+                ]
+              }
+            },
+            {
+              "slot41@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  112
+                ]
+              }
+            },
+            {
+              "slot42@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  112
+                ]
+              }
+            },
+            {
+              "slot43@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  112
+                ]
+              }
+            },
+            {
+              "slot44@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  112
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "quick_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.quick",
+          "$btn_offset": [
+            10,
+            138
+          ]
+        }
+      },
+      {
+        "split_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.split",
+          "$btn_offset": [
+            67,
+            138
+          ]
+        }
+      },
+      {
+        "store_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.store",
+          "$btn_offset": [
+            124,
+            138
+          ]
+        }
+      },
+      {
+        "sort_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.sort",
+          "$btn_offset": [
+            181,
+            138
+          ]
+        }
+      },
+      {
+        "take_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.take",
+          "$btn_offset": [
+            238,
+            138
+          ]
+        }
+      },
+      {
+        "drop_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.drop",
+          "$btn_offset": [
+            295,
+            138
+          ]
+        }
+      },
+      {
+        "close_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.close",
+          "$btn_offset": [
+            352,
+            138
+          ]
+        }
+      }
+    ]
+  },
+  "content_chest_45": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "morechests_panel@pureRainChestsUI.panel_chest_45": {}
+      }
+    ]
+  },
+  "main_chest_45@common.base_screen": {
+    "$screen_content": "pureRainChestsUI.content_chest_45",
+    "is_showing_menu": true,
+    "absorbs_input": true,
+    "should_steal_mouse": true,
+    "render_game_behind": true,
+    "force_render_below": true
+  },
+  "panel_chest_54": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": "@panel_open_offset",
+    "alpha": "@panel_open_alpha",
+    "size": [
+      414,
+      188
+    ],
+    "layer": 10,
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "textures/ui/morechests/panel_bg",
+          "nineslice_size": 4,
+          "keep_ratio": false,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            414,
+            188
+          ],
+          "layer": 11
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            10
+          ],
+          "size": [
+            414,
+            14
+          ],
+          "layer": 22,
+          "font_size": "large",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "text": ""
+        }
+      },
+      {
+        "status": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10,
+            12
+          ],
+          "size": [
+            138,
+            10
+          ],
+          "layer": 22,
+          "font_size": "small",
+          "font_type": "smooth",
+          "text_alignment": "left",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": ""
+        }
+      },
+      {
+        "inv_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            38,
+            46
+          ],
+          "size": [
+            162,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.inventory"
+        }
+      },
+      {
+        "chest_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            214,
+            28
+          ],
+          "size": [
+            162,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.chest"
+        }
+      },
+      {
+        "inv_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  58
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  58
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  58
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  58
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  58
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  58
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  58
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  58
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  58
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  76
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  76
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  76
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  76
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  76
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  76
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  76
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  76
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  76
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  94
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  94
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  94
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  94
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  94
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  94
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  94
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  94
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  94
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  112
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  112
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  112
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  112
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  112
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  112
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  112
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  112
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  112
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chest_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  40
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  40
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  40
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  40
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  40
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  40
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  40
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  40
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  40
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  58
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  58
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  58
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  58
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  58
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  58
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  58
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  58
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  58
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  76
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  76
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  76
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  76
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  76
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  76
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  76
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  76
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  76
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  94
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  94
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  94
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  94
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  94
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  94
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  94
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  94
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  94
+                ]
+              }
+            },
+            {
+              "slot36@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  112
+                ]
+              }
+            },
+            {
+              "slot37@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  112
+                ]
+              }
+            },
+            {
+              "slot38@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  112
+                ]
+              }
+            },
+            {
+              "slot39@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  112
+                ]
+              }
+            },
+            {
+              "slot40@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  112
+                ]
+              }
+            },
+            {
+              "slot41@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  112
+                ]
+              }
+            },
+            {
+              "slot42@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  112
+                ]
+              }
+            },
+            {
+              "slot43@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  112
+                ]
+              }
+            },
+            {
+              "slot44@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  112
+                ]
+              }
+            },
+            {
+              "slot45@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  130
+                ]
+              }
+            },
+            {
+              "slot46@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  130
+                ]
+              }
+            },
+            {
+              "slot47@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  130
+                ]
+              }
+            },
+            {
+              "slot48@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  130
+                ]
+              }
+            },
+            {
+              "slot49@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  130
+                ]
+              }
+            },
+            {
+              "slot50@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  130
+                ]
+              }
+            },
+            {
+              "slot51@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  130
+                ]
+              }
+            },
+            {
+              "slot52@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  130
+                ]
+              }
+            },
+            {
+              "slot53@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  130
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "quick_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.quick",
+          "$btn_offset": [
+            10,
+            156
+          ]
+        }
+      },
+      {
+        "split_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.split",
+          "$btn_offset": [
+            67,
+            156
+          ]
+        }
+      },
+      {
+        "store_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.store",
+          "$btn_offset": [
+            124,
+            156
+          ]
+        }
+      },
+      {
+        "sort_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.sort",
+          "$btn_offset": [
+            181,
+            156
+          ]
+        }
+      },
+      {
+        "take_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.take",
+          "$btn_offset": [
+            238,
+            156
+          ]
+        }
+      },
+      {
+        "drop_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.drop",
+          "$btn_offset": [
+            295,
+            156
+          ]
+        }
+      },
+      {
+        "close_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.close",
+          "$btn_offset": [
+            352,
+            156
+          ]
+        }
+      }
+    ]
+  },
+  "content_chest_54": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "morechests_panel@pureRainChestsUI.panel_chest_54": {}
+      }
+    ]
+  },
+  "main_chest_54@common.base_screen": {
+    "$screen_content": "pureRainChestsUI.content_chest_54",
+    "is_showing_menu": true,
+    "absorbs_input": true,
+    "should_steal_mouse": true,
+    "render_game_behind": true,
+    "force_render_below": true
+  },
+  "panel_chest_81": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": "@panel_open_offset",
+    "alpha": "@panel_open_alpha",
+    "size": [
+      414,
+      242
+    ],
+    "layer": 10,
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "textures/ui/morechests/panel_bg",
+          "nineslice_size": 4,
+          "keep_ratio": false,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            414,
+            242
+          ],
+          "layer": 11
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            10
+          ],
+          "size": [
+            414,
+            14
+          ],
+          "layer": 22,
+          "font_size": "large",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "text": ""
+        }
+      },
+      {
+        "status": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10,
+            12
+          ],
+          "size": [
+            138,
+            10
+          ],
+          "layer": 22,
+          "font_size": "small",
+          "font_type": "smooth",
+          "text_alignment": "left",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": ""
+        }
+      },
+      {
+        "inv_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            38,
+            73
+          ],
+          "size": [
+            162,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.inventory"
+        }
+      },
+      {
+        "chest_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            214,
+            28
+          ],
+          "size": [
+            162,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.chest"
+        }
+      },
+      {
+        "inv_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  85
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  85
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  85
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  85
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  85
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  85
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  85
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  85
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  85
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  103
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  103
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  103
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  103
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  103
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  103
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  103
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  103
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  103
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  121
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  121
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  121
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  121
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  121
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  121
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  121
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  121
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  121
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  38,
+                  139
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  56,
+                  139
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  74,
+                  139
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  92,
+                  139
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  110,
+                  139
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  128,
+                  139
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  146,
+                  139
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  164,
+                  139
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  182,
+                  139
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chest_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  40
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  40
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  40
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  40
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  40
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  40
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  40
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  40
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  40
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  58
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  58
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  58
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  58
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  58
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  58
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  58
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  58
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  58
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  76
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  76
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  76
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  76
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  76
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  76
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  76
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  76
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  76
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  94
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  94
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  94
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  94
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  94
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  94
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  94
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  94
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  94
+                ]
+              }
+            },
+            {
+              "slot36@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  112
+                ]
+              }
+            },
+            {
+              "slot37@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  112
+                ]
+              }
+            },
+            {
+              "slot38@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  112
+                ]
+              }
+            },
+            {
+              "slot39@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  112
+                ]
+              }
+            },
+            {
+              "slot40@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  112
+                ]
+              }
+            },
+            {
+              "slot41@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  112
+                ]
+              }
+            },
+            {
+              "slot42@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  112
+                ]
+              }
+            },
+            {
+              "slot43@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  112
+                ]
+              }
+            },
+            {
+              "slot44@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  112
+                ]
+              }
+            },
+            {
+              "slot45@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  130
+                ]
+              }
+            },
+            {
+              "slot46@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  130
+                ]
+              }
+            },
+            {
+              "slot47@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  130
+                ]
+              }
+            },
+            {
+              "slot48@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  130
+                ]
+              }
+            },
+            {
+              "slot49@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  130
+                ]
+              }
+            },
+            {
+              "slot50@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  130
+                ]
+              }
+            },
+            {
+              "slot51@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  130
+                ]
+              }
+            },
+            {
+              "slot52@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  130
+                ]
+              }
+            },
+            {
+              "slot53@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  130
+                ]
+              }
+            },
+            {
+              "slot54@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  148
+                ]
+              }
+            },
+            {
+              "slot55@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  148
+                ]
+              }
+            },
+            {
+              "slot56@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  148
+                ]
+              }
+            },
+            {
+              "slot57@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  148
+                ]
+              }
+            },
+            {
+              "slot58@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  148
+                ]
+              }
+            },
+            {
+              "slot59@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  148
+                ]
+              }
+            },
+            {
+              "slot60@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  148
+                ]
+              }
+            },
+            {
+              "slot61@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  148
+                ]
+              }
+            },
+            {
+              "slot62@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  148
+                ]
+              }
+            },
+            {
+              "slot63@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  166
+                ]
+              }
+            },
+            {
+              "slot64@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  166
+                ]
+              }
+            },
+            {
+              "slot65@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  166
+                ]
+              }
+            },
+            {
+              "slot66@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  166
+                ]
+              }
+            },
+            {
+              "slot67@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  166
+                ]
+              }
+            },
+            {
+              "slot68@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  166
+                ]
+              }
+            },
+            {
+              "slot69@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  166
+                ]
+              }
+            },
+            {
+              "slot70@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  166
+                ]
+              }
+            },
+            {
+              "slot71@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  166
+                ]
+              }
+            },
+            {
+              "slot72@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  214,
+                  184
+                ]
+              }
+            },
+            {
+              "slot73@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  232,
+                  184
+                ]
+              }
+            },
+            {
+              "slot74@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  250,
+                  184
+                ]
+              }
+            },
+            {
+              "slot75@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  268,
+                  184
+                ]
+              }
+            },
+            {
+              "slot76@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  286,
+                  184
+                ]
+              }
+            },
+            {
+              "slot77@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  304,
+                  184
+                ]
+              }
+            },
+            {
+              "slot78@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  322,
+                  184
+                ]
+              }
+            },
+            {
+              "slot79@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  340,
+                  184
+                ]
+              }
+            },
+            {
+              "slot80@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  358,
+                  184
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "quick_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.quick",
+          "$btn_offset": [
+            10,
+            210
+          ]
+        }
+      },
+      {
+        "split_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.split",
+          "$btn_offset": [
+            67,
+            210
+          ]
+        }
+      },
+      {
+        "store_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.store",
+          "$btn_offset": [
+            124,
+            210
+          ]
+        }
+      },
+      {
+        "sort_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.sort",
+          "$btn_offset": [
+            181,
+            210
+          ]
+        }
+      },
+      {
+        "take_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.take",
+          "$btn_offset": [
+            238,
+            210
+          ]
+        }
+      },
+      {
+        "drop_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.drop",
+          "$btn_offset": [
+            295,
+            210
+          ]
+        }
+      },
+      {
+        "close_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.close",
+          "$btn_offset": [
+            352,
+            210
+          ]
+        }
+      }
+    ]
+  },
+  "content_chest_81": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "morechests_panel@pureRainChestsUI.panel_chest_81": {}
+      }
+    ]
+  },
+  "main_chest_81@common.base_screen": {
+    "$screen_content": "pureRainChestsUI.content_chest_81",
+    "is_showing_menu": true,
+    "absorbs_input": true,
+    "should_steal_mouse": true,
+    "render_game_behind": true,
+    "force_render_below": true
+  },
+  "panel_chest_108": {
+    "type": "panel",
+    "anchor_from": "center",
+    "anchor_to": "center",
+    "offset": "@panel_open_offset",
+    "alpha": "@panel_open_alpha",
+    "size": [
+      414,
+      242
+    ],
+    "layer": 10,
+    "controls": [
+      {
+        "bg": {
+          "type": "image",
+          "texture": "textures/ui/morechests/panel_bg",
+          "nineslice_size": 4,
+          "keep_ratio": false,
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            414,
+            242
+          ],
+          "layer": 11
+        }
+      },
+      {
+        "title": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            10
+          ],
+          "size": [
+            414,
+            14
+          ],
+          "layer": 22,
+          "font_size": "large",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.15,
+            0.15,
+            0.15
+          ],
+          "text": ""
+        }
+      },
+      {
+        "status": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            10,
+            12
+          ],
+          "size": [
+            138,
+            10
+          ],
+          "layer": 22,
+          "font_size": "small",
+          "font_type": "smooth",
+          "text_alignment": "left",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": ""
+        }
+      },
+      {
+        "inv_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            11,
+            73
+          ],
+          "size": [
+            162,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.inventory"
+        }
+      },
+      {
+        "chest_label": {
+          "type": "label",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            187,
+            28
+          ],
+          "size": [
+            216,
+            10
+          ],
+          "layer": 22,
+          "font_size": "normal",
+          "font_type": "smooth",
+          "text_alignment": "center",
+          "shadow": false,
+          "color": [
+            0.28,
+            0.28,
+            0.28
+          ],
+          "text": "morechests.ui.chest"
+        }
+      },
+      {
+        "inv_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  11,
+                  85
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  29,
+                  85
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  47,
+                  85
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  65,
+                  85
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  83,
+                  85
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  101,
+                  85
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  119,
+                  85
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  137,
+                  85
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  155,
+                  85
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  11,
+                  103
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  29,
+                  103
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  47,
+                  103
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  65,
+                  103
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  83,
+                  103
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  101,
+                  103
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  119,
+                  103
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  137,
+                  103
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  155,
+                  103
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  11,
+                  121
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  29,
+                  121
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  47,
+                  121
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  65,
+                  121
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  83,
+                  121
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  101,
+                  121
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  119,
+                  121
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  137,
+                  121
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  155,
+                  121
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  11,
+                  139
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  29,
+                  139
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  47,
+                  139
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  65,
+                  139
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  83,
+                  139
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  101,
+                  139
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  119,
+                  139
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  137,
+                  139
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  155,
+                  139
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "chest_slots": {
+          "type": "panel",
+          "anchor_from": "top_left",
+          "anchor_to": "top_left",
+          "offset": [
+            0,
+            0
+          ],
+          "size": [
+            "100%",
+            "100%"
+          ],
+          "layer": 12,
+          "controls": [
+            {
+              "slot0@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  40
+                ]
+              }
+            },
+            {
+              "slot1@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  40
+                ]
+              }
+            },
+            {
+              "slot2@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  40
+                ]
+              }
+            },
+            {
+              "slot3@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  40
+                ]
+              }
+            },
+            {
+              "slot4@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  40
+                ]
+              }
+            },
+            {
+              "slot5@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  40
+                ]
+              }
+            },
+            {
+              "slot6@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  40
+                ]
+              }
+            },
+            {
+              "slot7@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  40
+                ]
+              }
+            },
+            {
+              "slot8@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  40
+                ]
+              }
+            },
+            {
+              "slot9@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  40
+                ]
+              }
+            },
+            {
+              "slot10@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  40
+                ]
+              }
+            },
+            {
+              "slot11@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  40
+                ]
+              }
+            },
+            {
+              "slot12@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  58
+                ]
+              }
+            },
+            {
+              "slot13@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  58
+                ]
+              }
+            },
+            {
+              "slot14@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  58
+                ]
+              }
+            },
+            {
+              "slot15@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  58
+                ]
+              }
+            },
+            {
+              "slot16@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  58
+                ]
+              }
+            },
+            {
+              "slot17@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  58
+                ]
+              }
+            },
+            {
+              "slot18@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  58
+                ]
+              }
+            },
+            {
+              "slot19@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  58
+                ]
+              }
+            },
+            {
+              "slot20@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  58
+                ]
+              }
+            },
+            {
+              "slot21@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  58
+                ]
+              }
+            },
+            {
+              "slot22@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  58
+                ]
+              }
+            },
+            {
+              "slot23@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  58
+                ]
+              }
+            },
+            {
+              "slot24@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  76
+                ]
+              }
+            },
+            {
+              "slot25@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  76
+                ]
+              }
+            },
+            {
+              "slot26@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  76
+                ]
+              }
+            },
+            {
+              "slot27@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  76
+                ]
+              }
+            },
+            {
+              "slot28@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  76
+                ]
+              }
+            },
+            {
+              "slot29@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  76
+                ]
+              }
+            },
+            {
+              "slot30@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  76
+                ]
+              }
+            },
+            {
+              "slot31@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  76
+                ]
+              }
+            },
+            {
+              "slot32@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  76
+                ]
+              }
+            },
+            {
+              "slot33@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  76
+                ]
+              }
+            },
+            {
+              "slot34@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  76
+                ]
+              }
+            },
+            {
+              "slot35@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  76
+                ]
+              }
+            },
+            {
+              "slot36@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  94
+                ]
+              }
+            },
+            {
+              "slot37@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  94
+                ]
+              }
+            },
+            {
+              "slot38@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  94
+                ]
+              }
+            },
+            {
+              "slot39@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  94
+                ]
+              }
+            },
+            {
+              "slot40@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  94
+                ]
+              }
+            },
+            {
+              "slot41@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  94
+                ]
+              }
+            },
+            {
+              "slot42@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  94
+                ]
+              }
+            },
+            {
+              "slot43@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  94
+                ]
+              }
+            },
+            {
+              "slot44@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  94
+                ]
+              }
+            },
+            {
+              "slot45@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  94
+                ]
+              }
+            },
+            {
+              "slot46@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  94
+                ]
+              }
+            },
+            {
+              "slot47@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  94
+                ]
+              }
+            },
+            {
+              "slot48@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  112
+                ]
+              }
+            },
+            {
+              "slot49@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  112
+                ]
+              }
+            },
+            {
+              "slot50@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  112
+                ]
+              }
+            },
+            {
+              "slot51@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  112
+                ]
+              }
+            },
+            {
+              "slot52@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  112
+                ]
+              }
+            },
+            {
+              "slot53@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  112
+                ]
+              }
+            },
+            {
+              "slot54@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  112
+                ]
+              }
+            },
+            {
+              "slot55@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  112
+                ]
+              }
+            },
+            {
+              "slot56@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  112
+                ]
+              }
+            },
+            {
+              "slot57@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  112
+                ]
+              }
+            },
+            {
+              "slot58@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  112
+                ]
+              }
+            },
+            {
+              "slot59@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  112
+                ]
+              }
+            },
+            {
+              "slot60@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  130
+                ]
+              }
+            },
+            {
+              "slot61@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  130
+                ]
+              }
+            },
+            {
+              "slot62@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  130
+                ]
+              }
+            },
+            {
+              "slot63@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  130
+                ]
+              }
+            },
+            {
+              "slot64@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  130
+                ]
+              }
+            },
+            {
+              "slot65@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  130
+                ]
+              }
+            },
+            {
+              "slot66@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  130
+                ]
+              }
+            },
+            {
+              "slot67@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  130
+                ]
+              }
+            },
+            {
+              "slot68@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  130
+                ]
+              }
+            },
+            {
+              "slot69@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  130
+                ]
+              }
+            },
+            {
+              "slot70@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  130
+                ]
+              }
+            },
+            {
+              "slot71@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  130
+                ]
+              }
+            },
+            {
+              "slot72@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  148
+                ]
+              }
+            },
+            {
+              "slot73@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  148
+                ]
+              }
+            },
+            {
+              "slot74@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  148
+                ]
+              }
+            },
+            {
+              "slot75@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  148
+                ]
+              }
+            },
+            {
+              "slot76@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  148
+                ]
+              }
+            },
+            {
+              "slot77@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  148
+                ]
+              }
+            },
+            {
+              "slot78@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  148
+                ]
+              }
+            },
+            {
+              "slot79@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  148
+                ]
+              }
+            },
+            {
+              "slot80@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  148
+                ]
+              }
+            },
+            {
+              "slot81@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  148
+                ]
+              }
+            },
+            {
+              "slot82@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  148
+                ]
+              }
+            },
+            {
+              "slot83@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  148
+                ]
+              }
+            },
+            {
+              "slot84@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  166
+                ]
+              }
+            },
+            {
+              "slot85@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  166
+                ]
+              }
+            },
+            {
+              "slot86@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  166
+                ]
+              }
+            },
+            {
+              "slot87@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  166
+                ]
+              }
+            },
+            {
+              "slot88@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  166
+                ]
+              }
+            },
+            {
+              "slot89@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  166
+                ]
+              }
+            },
+            {
+              "slot90@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  166
+                ]
+              }
+            },
+            {
+              "slot91@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  166
+                ]
+              }
+            },
+            {
+              "slot92@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  166
+                ]
+              }
+            },
+            {
+              "slot93@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  166
+                ]
+              }
+            },
+            {
+              "slot94@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  166
+                ]
+              }
+            },
+            {
+              "slot95@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  166
+                ]
+              }
+            },
+            {
+              "slot96@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  187,
+                  184
+                ]
+              }
+            },
+            {
+              "slot97@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  205,
+                  184
+                ]
+              }
+            },
+            {
+              "slot98@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  223,
+                  184
+                ]
+              }
+            },
+            {
+              "slot99@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  241,
+                  184
+                ]
+              }
+            },
+            {
+              "slot100@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  259,
+                  184
+                ]
+              }
+            },
+            {
+              "slot101@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  277,
+                  184
+                ]
+              }
+            },
+            {
+              "slot102@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  295,
+                  184
+                ]
+              }
+            },
+            {
+              "slot103@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  313,
+                  184
+                ]
+              }
+            },
+            {
+              "slot104@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  331,
+                  184
+                ]
+              }
+            },
+            {
+              "slot105@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  349,
+                  184
+                ]
+              }
+            },
+            {
+              "slot106@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  367,
+                  184
+                ]
+              }
+            },
+            {
+              "slot107@pureRainChestsUI.slot_button": {
+                "$item_slot_offset": [
+                  385,
+                  184
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "quick_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.quick",
+          "$btn_offset": [
+            10,
+            210
+          ]
+        }
+      },
+      {
+        "split_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.split",
+          "$btn_offset": [
+            67,
+            210
+          ]
+        }
+      },
+      {
+        "store_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.store",
+          "$btn_offset": [
+            124,
+            210
+          ]
+        }
+      },
+      {
+        "sort_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.sort",
+          "$btn_offset": [
+            181,
+            210
+          ]
+        }
+      },
+      {
+        "take_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.take",
+          "$btn_offset": [
+            238,
+            210
+          ]
+        }
+      },
+      {
+        "drop_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.drop",
+          "$btn_offset": [
+            295,
+            210
+          ]
+        }
+      },
+      {
+        "close_btn@pureRainChestsUI.text_button": {
+          "$btn_text": "morechests.ui.close",
+          "$btn_offset": [
+            352,
+            210
+          ]
+        }
+      }
+    ]
+  },
+  "content_chest_108": {
+    "type": "panel",
+    "size": [
+      "100%",
+      "100%"
+    ],
+    "controls": [
+      {
+        "morechests_panel@pureRainChestsUI.panel_chest_108": {}
+      }
+    ]
+  },
+  "main_chest_108@common.base_screen": {
+    "$screen_content": "pureRainChestsUI.content_chest_108",
+    "is_showing_menu": true,
+    "absorbs_input": true,
+    "should_steal_mouse": true,
+    "render_game_behind": true,
+    "force_render_below": true
+  }
+}

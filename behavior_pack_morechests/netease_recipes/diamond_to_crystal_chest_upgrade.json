@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "purerain_chests:diamond_to_crystal_chest_upgrade"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "GGG",
+      "GMG",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glass"
+      },
+      "M": {
+        "item": "minecraft:obsidian"
+      }
+    },
+    "result": {
+      "item": "purerain_chests:diamond_to_crystal_chest_upgrade",
+      "count": 1
+    }
+  }
+}

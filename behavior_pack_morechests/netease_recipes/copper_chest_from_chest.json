@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "purerain_chests:copper_chest_from_chest"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "MMM",
+      "MSM",
+      "MMM"
+    ],
+    "key": {
+      "M": {
+        "item": "minecraft:raw_copper"
+      },
+      "S": {
+        "item": "minecraft:chest"
+      }
+    },
+    "result": {
+      "item": "purerain_chests:copper_chest",
+      "count": 1
+    }
+  }
+}

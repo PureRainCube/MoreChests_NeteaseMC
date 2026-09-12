@@ -1,0 +1,9 @@
+{
+  "category": [
+    {
+      "name": "purerain_morechests",
+      "labelText": "itemCategory.name.purerain_morechests",
+      "icon": "textures/items/morechests/iron_gold_upgrade"
+    }
+  ]
+}

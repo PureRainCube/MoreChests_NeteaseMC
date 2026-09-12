@@ -1,0 +1,31 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "purerain_chests:gold_to_diamond_chest_upgrade"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "GGG",
+      "MSM",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glass"
+      },
+      "M": {
+        "item": "minecraft:diamond"
+      },
+      "S": {
+        "item": "minecraft:gold_ingot"
+      }
+    },
+    "result": {
+      "item": "purerain_chests:gold_to_diamond_chest_upgrade",
+      "count": 1
+    }
+  }
+}

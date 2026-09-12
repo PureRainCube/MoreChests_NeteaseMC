@@ -1,0 +1,1311 @@
+{
+    "namespace": "pureRainAdUI",
+    "flat": {
+        "type": "image",
+        "texture": "textures/ui/control_white",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "nineslice_size": 1,
+        "tiled": false
+    },
+    "cta_face": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "fill@pureRainAdUI.flat": {
+                    "layer": 2,
+                    "color": [
+                        0.24,
+                        0.55,
+                        0.16
+                    ]
+                }
+            },
+            {
+                "edge@pureRainAdUI.flat": {
+                    "layer": 3,
+                    "size": [
+                        "100%",
+                        3
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "color": [
+                        0.15,
+                        0.35,
+                        0.09
+                    ]
+                }
+            }
+        ]
+    },
+    "cta_face_hot": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "fill@pureRainAdUI.flat": {
+                    "layer": 2,
+                    "color": [
+                        0.31,
+                        0.68,
+                        0.21
+                    ]
+                }
+            },
+            {
+                "edge@pureRainAdUI.flat": {
+                    "layer": 3,
+                    "size": [
+                        "100%",
+                        3
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "color": [
+                        0.19,
+                        0.44,
+                        0.12
+                    ]
+                }
+            }
+        ]
+    },
+    "ghost_face": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "border@pureRainAdUI.flat": {
+                    "layer": 2,
+                    "color": [
+                        0.29,
+                        0.31,
+                        0.34
+                    ]
+                }
+            },
+            {
+                "fill@pureRainAdUI.flat": {
+                    "layer": 3,
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
+                    "color": [
+                        0.13,
+                        0.14,
+                        0.16
+                    ]
+                }
+            }
+        ]
+    },
+    "ghost_face_hot": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "border@pureRainAdUI.flat": {
+                    "layer": 2,
+                    "color": [
+                        0.45,
+                        0.48,
+                        0.52
+                    ]
+                }
+            },
+            {
+                "fill@pureRainAdUI.flat": {
+                    "layer": 3,
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
+                    "color": [
+                        0.2,
+                        0.21,
+                        0.24
+                    ]
+                }
+            }
+        ]
+    },
+    "nav_face": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "fill@pureRainAdUI.flat": {
+                    "layer": 2,
+                    "color": [
+                        0.11,
+                        0.12,
+                        0.14
+                    ]
+                }
+            },
+            {
+                "edge@pureRainAdUI.flat": {
+                    "layer": 3,
+                    "size": [
+                        "100%",
+                        1
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "color": [
+                        0.18,
+                        0.19,
+                        0.22
+                    ]
+                }
+            }
+        ]
+    },
+    "nav_face_hot": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "controls": [
+            {
+                "fill@pureRainAdUI.flat": {
+                    "layer": 2,
+                    "color": [
+                        0.18,
+                        0.19,
+                        0.22
+                    ]
+                }
+            },
+            {
+                "edge@pureRainAdUI.flat": {
+                    "layer": 3,
+                    "size": [
+                        "100%",
+                        1
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "color": [
+                        0.31,
+                        0.72,
+                        0.24
+                    ]
+                }
+            }
+        ]
+    },
+    "nav_btn": {
+        "type": "button",
+        "size": [
+            "100%",
+            "11%"
+        ],
+        "anchor_from": "top_left",
+        "anchor_to": "top_left",
+        "layer": 5,
+        "default_control": "default",
+        "hover_control": "hover",
+        "pressed_control": "pressed",
+        "controls": [
+            {
+                "default@pureRainAdUI.nav_face": {}
+            },
+            {
+                "hover@pureRainAdUI.nav_face_hot": {}
+            },
+            {
+                "pressed@pureRainAdUI.nav_face_hot": {}
+            },
+            {
+                "active@pureRainAdUI.flat": {
+                    "layer": 6,
+                    "size": [
+                        3,
+                        "100%"
+                    ],
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "visible": false,
+                    "color": [
+                        0.31,
+                        0.72,
+                        0.24
+                    ]
+                }
+            },
+            {
+                "icon": {
+                    "type": "image",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [
+                        "8%+0px",
+                        "0%+0px"
+                    ],
+                    "size": [
+                        "100%y+0px",
+                        "62%+0px"
+                    ],
+                    "layer": 7,
+                    "texture": "$nav_icon"
+                }
+            },
+            {
+                "label": {
+                    "type": "label",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "left_middle",
+                    "offset": [
+                        "30%+0px",
+                        "0%+0px"
+                    ],
+                    "layer": 7,
+                    "font_scale_factor": 0.85,
+                    "shadow": false,
+                    "color": [
+                        0.88,
+                        0.89,
+                        0.91
+                    ],
+                    "text": "$nav_text"
+                }
+            }
+        ]
+    },
+    "ad_stack": {
+        "type": "stack_panel",
+        "size": [
+            "100%+0px",
+            "100%+0px"
+        ],
+        "layer": 1,
+        "orientation": "vertical",
+        "controls": [
+            {
+                "ad_content_1": {
+                    "type": "stack_panel",
+                    "size": [
+                        "100%+0px",
+                        "20%x+0px"
+                    ],
+                    "layer": 1,
+                    "orientation": "horizontal",
+                    "controls": [
+                        {
+                            "image": {
+                                "type": "image",
+                                "size": [
+                                    "20%+0px",
+                                    "100%x+0px"
+                                ],
+                                "layer": 1,
+                                "texture": "textures/netease/common/image/default",
+                                "controls": [
+                                    {
+                                        "tile_line_r@pureRainAdUI.flat": {
+                                            "layer": 3,
+                                            "size": [
+                                                1,
+                                                "100%"
+                                            ],
+                                            "anchor_from": "right_middle",
+                                            "anchor_to": "right_middle",
+                                            "alpha": 0.85,
+                                            "color": [
+                                                0.07,
+                                                0.075,
+                                                0.09
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "tile_line_b@pureRainAdUI.flat": {
+                                            "layer": 3,
+                                            "size": [
+                                                "100%",
+                                                1
+                                            ],
+                                            "anchor_from": "bottom_middle",
+                                            "anchor_to": "bottom_middle",
+                                            "alpha": 0.85,
+                                            "color": [
+                                                0.07,
+                                                0.075,
+                                                0.09
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "button@common.button": {
+                                            "type": "button",
+                                            "$control_alpha": 1.0,
+                                            "$default_texture": "",
+                                            "$hover_texture": "",
+                                            "$is_new_nine_slice": false,
+                                            "$label_color": [
+                                                1,
+                                                1,
+                                                1
+                                            ],
+                                            "$label_font_scale_factor": 1.0,
+                                            "$label_font_size": "large",
+                                            "$label_layer": 3,
+                                            "$label_offset": [
+                                                0,
+                                                0
+                                            ],
+                                            "$label_text": "",
+                                            "$nine_slice_buttom": 0,
+                                            "$nine_slice_left": 0,
+                                            "$nine_slice_right": 0,
+                                            "$nine_slice_top": 0,
+                                            "$nineslice_size": [
+                                                0,
+                                                0,
+                                                0,
+                                                0
+                                            ],
+                                            "$pressed_button_name": "%netease_editor_template_namespace.click",
+                                            "$pressed_texture": "",
+                                            "$texture_layer": 2,
+                                            "size": [
+                                                "100%+0px",
+                                                "100%+0px"
+                                            ],
+                                            "layer": 2,
+                                            "button_mappings": [],
+                                            "default_control": "default",
+                                            "hover_control": "hover",
+                                            "is_handle_button_move_event": true,
+                                            "pressed_control": "pressed",
+                                            "bindings": [
+                                                {
+                                                    "binding_type": "collection_details",
+                                                    "binding_collection_name": "",
+                                                    "binding_condition": "always_when_visible"
+                                                }
+                                            ],
+                                            "controls": [
+                                                {
+                                                    "default@netease_editor_template_namespace.default": {}
+                                                },
+                                                {
+                                                    "hover@netease_editor_template_namespace.hover": {}
+                                                },
+                                                {
+                                                    "pressed@netease_editor_template_namespace.pressed": {}
+                                                },
+                                                {
+                                                    "button_label@netease_editor_template_namespace.button_label": {}
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "card": {
+        "type": "panel",
+        "size": [
+            "84%",
+            "82%"
+        ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "layer": 5,
+        "controls": [
+            {
+                "card_border@pureRainAdUI.flat": {
+                    "layer": 2,
+                    "color": [
+                        0.22,
+                        0.24,
+                        0.26
+                    ]
+                }
+            },
+            {
+                "card_bg@pureRainAdUI.flat": {
+                    "layer": 3,
+                    "size": [
+                        "100% - 2px",
+                        "100% - 2px"
+                    ],
+                    "color": [
+                        0.07,
+                        0.075,
+                        0.09
+                    ]
+                }
+            },
+            {
+                "accent@pureRainAdUI.flat": {
+                    "layer": 4,
+                    "size": [
+                        "100% - 2px",
+                        3
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        1
+                    ],
+                    "color": [
+                        0.31,
+                        0.72,
+                        0.24
+                    ]
+                }
+            },
+            {
+                "title": {
+                    "type": "label",
+                    "text": "清雨立方 · 推荐内容",
+                    "layer": 8,
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        "4%+0px",
+                        "5%+0px"
+                    ],
+                    "font_scale_factor": 1.0,
+                    "shadow": false,
+                    "color": [
+                        1.0,
+                        1.0,
+                        1.0
+                    ]
+                }
+            },
+            {
+                "subtitle": {
+                    "type": "label",
+                    "text": "精选模组与联机大厅",
+                    "layer": 8,
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        "4%+0px",
+                        "11%+0px"
+                    ],
+                    "font_scale_factor": 0.7,
+                    "shadow": false,
+                    "color": [
+                        0.6,
+                        0.62,
+                        0.65
+                    ]
+                }
+            },
+            {
+                "tips_box": {
+                    "type": "panel",
+                    "size": [
+                        "40%",
+                        "12%"
+                    ],
+                    "layer": 8,
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [
+                        "-9%+0px",
+                        "5%+0px"
+                    ],
+                    "controls": [
+                        {
+                            "label": {
+                                "type": "label",
+                                "text": "",
+                                "layer": 9,
+                                "anchor_from": "top_right",
+                                "anchor_to": "top_right",
+                                "font_scale_factor": 0.7,
+                                "shadow": false,
+                                "text_alignment": "right",
+                                "color": [
+                                    0.6,
+                                    0.62,
+                                    0.65
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "rule@pureRainAdUI.flat": {
+                    "layer": 5,
+                    "size": [
+                        "92%",
+                        1
+                    ],
+                    "anchor_from": "top_middle",
+                    "anchor_to": "top_middle",
+                    "offset": [
+                        0,
+                        "18%+0px"
+                    ],
+                    "color": [
+                        0.18,
+                        0.19,
+                        0.22
+                    ]
+                }
+            },
+            {
+                "nav": {
+                    "type": "panel",
+                    "size": [
+                        "20%",
+                        "60%"
+                    ],
+                    "layer": 5,
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        "4%+0px",
+                        "22%+0px"
+                    ],
+                    "controls": [
+                        {
+                            "addons_btn@pureRainAdUI.nav_btn": {
+                                "$nav_text": "模组",
+                                "$nav_icon": "textures/ui/Add-Ons_Side-Nav_Icon_24x24",
+                                "offset": [
+                                    0,
+                                    "0%+0px"
+                                ]
+                            }
+                        },
+                        {
+                            "lobby_btn@pureRainAdUI.nav_btn": {
+                                "$nav_text": "联机大厅",
+                                "$nav_icon": "textures/ui/portalBg",
+                                "offset": [
+                                    0,
+                                    "14%+0px"
+                                ]
+                            }
+                        },
+                        {
+                            "pack_btn@pureRainAdUI.nav_btn": {
+                                "$nav_text": "整合包",
+                                "$nav_icon": "textures/ui/promo_holiday_gift_small",
+                                "visible": false,
+                                "offset": [
+                                    0,
+                                    "28%+0px"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "content_border@pureRainAdUI.flat": {
+                    "layer": 5,
+                    "size": [
+                        "70%",
+                        "54%"
+                    ],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        "27%+0px",
+                        "21%+0px"
+                    ],
+                    "color": [
+                        0.18,
+                        0.19,
+                        0.22
+                    ]
+                }
+            },
+            {
+                "content_bg@pureRainAdUI.flat": {
+                    "layer": 6,
+                    "size": [
+                        "70% - 2px",
+                        "54% - 2px"
+                    ],
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        "27%+1px",
+                        "21%+1px"
+                    ],
+                    "color": [
+                        0.1,
+                        0.105,
+                        0.12
+                    ]
+                }
+            },
+            {
+                "scroll_view@common.scrolling_panel": {
+                    "$background_nine_slice_buttom": 0,
+                    "$background_nine_slice_left": 0,
+                    "$background_nine_slice_right": 0,
+                    "$background_nine_slice_top": 0,
+                    "$background_nineslice_size": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "$box_nine_slice_buttom": 0,
+                    "$box_nine_slice_left": 0,
+                    "$box_nine_slice_right": 0,
+                    "$box_nine_slice_top": 0,
+                    "$box_nineslice_size": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "$is_background_nine_slice": false,
+                    "$is_box_nine_slice": false,
+                    "$is_track_nine_slice": false,
+                    "$scroll_background_image_control": "netease_editor_template_namespace.scroll_background_image",
+                    "$scroll_background_texture": "textures/ui/ScrollRail",
+                    "$scroll_box_mouse_image_control": "netease_editor_template_namespace.scroll_box_image",
+                    "$scroll_box_texture": "textures/ui/newTouchScrollBox",
+                    "$scroll_box_touch_image_control": "netease_editor_template_namespace.scroll_box_image",
+                    "$scroll_track_image_control": "netease_editor_template_namespace.scroll_track_image",
+                    "$scroll_track_texture": "textures/ui/ScrollRail",
+                    "$scrolling_content": "pureRainAdUI.ad_stack",
+                    "$show_background": false,
+                    "$track_nine_slice_buttom": 0,
+                    "$track_nine_slice_left": 0,
+                    "$track_nine_slice_right": 0,
+                    "$track_nineslice_size": [
+                        0,
+                        0,
+                        0,
+                        0
+                    ],
+                    "$track_nine_slice_top": 0,
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "layer": 9,
+                    "offset": [
+                        "28%+0px",
+                        "22%+0px"
+                    ],
+                    "size": [
+                        "68%+0px",
+                        "52%+0px"
+                    ]
+                }
+            },
+            {
+                "support_note": {
+                    "type": "panel",
+                    "size": [
+                        "92%",
+                        "8%"
+                    ],
+                    "layer": 7,
+                    "anchor_from": "top_left",
+                    "anchor_to": "top_left",
+                    "offset": [
+                        "4%+0px",
+                        "77%+0px"
+                    ],
+                    "controls": [
+                        {
+                            "note_bg@pureRainAdUI.flat": {
+                                "layer": 7,
+                                "color": [
+                                    0.1,
+                                    0.105,
+                                    0.12
+                                ]
+                            }
+                        },
+                        {
+                            "note_accent@pureRainAdUI.flat": {
+                                "layer": 8,
+                                "size": [
+                                    2,
+                                    "100%"
+                                ],
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "color": [
+                                    0.31,
+                                    0.72,
+                                    0.24
+                                ]
+                            }
+                        },
+                        {
+                            "note_label": {
+                                "type": "label",
+                                "text": "作品制作不易，如果您喜欢我们的作品，可以通过下载我们其他商业化模组/多人玩法来支持我们！",
+                                "layer": 9,
+                                "anchor_from": "left_middle",
+                                "anchor_to": "left_middle",
+                                "offset": [
+                                    "2%+0px",
+                                    0
+                                ],
+                                "size": [
+                                    "96%",
+                                    "default"
+                                ],
+                                "font_scale_factor": 0.65,
+                                "shadow": false,
+                                "color": [
+                                    0.82,
+                                    0.84,
+                                    0.86
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "footer_rule@pureRainAdUI.flat": {
+                    "layer": 5,
+                    "size": [
+                        "92%",
+                        1
+                    ],
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "bottom_middle",
+                    "offset": [
+                        0,
+                        "-14%+0px"
+                    ],
+                    "color": [
+                        0.18,
+                        0.19,
+                        0.22
+                    ]
+                }
+            },
+            {
+                "dontshow": {
+                    "type": "button",
+                    "size": [
+                        "32%",
+                        "9%"
+                    ],
+                    "anchor_from": "bottom_left",
+                    "anchor_to": "bottom_left",
+                    "offset": [
+                        "4%+0px",
+                        "-4%+0px"
+                    ],
+                    "layer": 8,
+                    "default_control": "default",
+                    "hover_control": "hover",
+                    "pressed_control": "pressed",
+                    "controls": [
+                        {
+                            "default@pureRainAdUI.ghost_face": {}
+                        },
+                        {
+                            "hover@pureRainAdUI.ghost_face_hot": {}
+                        },
+                        {
+                            "pressed@pureRainAdUI.ghost_face_hot": {}
+                        },
+                        {
+                            "label": {
+                                "type": "label",
+                                "text": "永久关闭推荐入口",
+                                "layer": 9,
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "font_scale_factor": 0.7,
+                                "shadow": false,
+                                "color": [
+                                    0.72,
+                                    0.74,
+                                    0.77
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "footer_close_btn": {
+                    "type": "button",
+                    "size": [
+                        "18%",
+                        "9%"
+                    ],
+                    "anchor_from": "bottom_right",
+                    "anchor_to": "bottom_right",
+                    "offset": [
+                        "-4%+0px",
+                        "-4%+0px"
+                    ],
+                    "layer": 8,
+                    "default_control": "default",
+                    "hover_control": "hover",
+                    "pressed_control": "pressed",
+                    "controls": [
+                        {
+                            "default@pureRainAdUI.cta_face": {}
+                        },
+                        {
+                            "hover@pureRainAdUI.cta_face_hot": {}
+                        },
+                        {
+                            "pressed@pureRainAdUI.cta_face_hot": {}
+                        },
+                        {
+                            "label": {
+                                "type": "label",
+                                "text": "关闭",
+                                "layer": 9,
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "offset": [
+                                    0,
+                                    -1
+                                ],
+                                "font_scale_factor": 0.8,
+                                "shadow": false,
+                                "color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ]
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "close_btn": {
+                    "type": "button",
+                    "size": [
+                        "100%y+0px",
+                        "7%+0px"
+                    ],
+                    "anchor_from": "top_right",
+                    "anchor_to": "top_right",
+                    "offset": [
+                        "-2%+0px",
+                        "4%+0px"
+                    ],
+                    "layer": 8,
+                    "default_control": "default",
+                    "hover_control": "hover",
+                    "pressed_control": "pressed",
+                    "controls": [
+                        {
+                            "default@pureRainAdUI.ghost_face": {}
+                        },
+                        {
+                            "hover@pureRainAdUI.ghost_face_hot": {}
+                        },
+                        {
+                            "pressed@pureRainAdUI.ghost_face_hot": {}
+                        },
+                        {
+                            "label": {
+                                "type": "label",
+                                "text": "×",
+                                "layer": 9,
+                                "anchor_from": "center",
+                                "anchor_to": "center",
+                                "font_scale_factor": 1.0,
+                                "shadow": false,
+                                "color": [
+                                    0.9,
+                                    0.91,
+                                    0.93
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "confirm": {
+        "type": "panel",
+        "size": [
+            "100%",
+            "100%"
+        ],
+        "layer": 20,
+        "visible": false,
+        "controls": [
+            {
+                "dim@pureRainAdUI.flat": {
+                    "layer": 21,
+                    "alpha": 0.6,
+                    "color": [
+                        0.0,
+                        0.0,
+                        0.0
+                    ]
+                }
+            },
+            {
+                "box": {
+                    "type": "panel",
+                    "size": [
+                        "46%",
+                        "36%"
+                    ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "layer": 22,
+                    "controls": [
+                        {
+                            "box_border@pureRainAdUI.flat": {
+                                "layer": 23,
+                                "color": [
+                                    0.22,
+                                    0.24,
+                                    0.26
+                                ]
+                            }
+                        },
+                        {
+                            "box_bg@pureRainAdUI.flat": {
+                                "layer": 24,
+                                "size": [
+                                    "100% - 2px",
+                                    "100% - 2px"
+                                ],
+                                "color": [
+                                    0.07,
+                                    0.075,
+                                    0.09
+                                ]
+                            }
+                        },
+                        {
+                            "box_accent@pureRainAdUI.flat": {
+                                "layer": 25,
+                                "size": [
+                                    "100% - 2px",
+                                    3
+                                ],
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [
+                                    0,
+                                    1
+                                ],
+                                "color": [
+                                    0.31,
+                                    0.72,
+                                    0.24
+                                ]
+                            }
+                        },
+                        {
+                            "box_title": {
+                                "type": "label",
+                                "text": "永久关闭推荐入口？",
+                                "layer": 26,
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [
+                                    0,
+                                    "12%+0px"
+                                ],
+                                "font_scale_factor": 0.9,
+                                "shadow": false,
+                                "color": [
+                                    1.0,
+                                    1.0,
+                                    1.0
+                                ]
+                            }
+                        },
+                        {
+                            "box_body": {
+                                "type": "label",
+                                "text": "确认后本存档内不再向你显示推荐按钮和推荐面板。\n该操作无法撤销。",
+                                "layer": 26,
+                                "anchor_from": "top_middle",
+                                "anchor_to": "top_middle",
+                                "offset": [
+                                    0,
+                                    "34%+0px"
+                                ],
+                                "size": [
+                                    "84%",
+                                    "default"
+                                ],
+                                "font_scale_factor": 0.7,
+                                "shadow": false,
+                                "text_alignment": "center",
+                                "color": [
+                                    0.78,
+                                    0.79,
+                                    0.81
+                                ]
+                            }
+                        },
+                        {
+                            "no_btn": {
+                                "type": "button",
+                                "size": [
+                                    "34%",
+                                    "20%"
+                                ],
+                                "anchor_from": "bottom_left",
+                                "anchor_to": "bottom_left",
+                                "offset": [
+                                    "8%+0px",
+                                    "-12%+0px"
+                                ],
+                                "layer": 26,
+                                "default_control": "default",
+                                "hover_control": "hover",
+                                "pressed_control": "pressed",
+                                "controls": [
+                                    {
+                                        "default@pureRainAdUI.ghost_face": {}
+                                    },
+                                    {
+                                        "hover@pureRainAdUI.ghost_face_hot": {}
+                                    },
+                                    {
+                                        "pressed@pureRainAdUI.ghost_face_hot": {}
+                                    },
+                                    {
+                                        "label": {
+                                            "type": "label",
+                                            "text": "取消",
+                                            "layer": 27,
+                                            "anchor_from": "center",
+                                            "anchor_to": "center",
+                                            "font_scale_factor": 0.8,
+                                            "shadow": false,
+                                            "color": [
+                                                0.9,
+                                                0.91,
+                                                0.93
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "yes_btn": {
+                                "type": "button",
+                                "size": [
+                                    "34%",
+                                    "20%"
+                                ],
+                                "anchor_from": "bottom_right",
+                                "anchor_to": "bottom_right",
+                                "offset": [
+                                    "-8%+0px",
+                                    "-12%+0px"
+                                ],
+                                "layer": 26,
+                                "default_control": "default",
+                                "hover_control": "hover",
+                                "pressed_control": "pressed",
+                                "controls": [
+                                    {
+                                        "default@pureRainAdUI.cta_face": {}
+                                    },
+                                    {
+                                        "hover@pureRainAdUI.cta_face_hot": {}
+                                    },
+                                    {
+                                        "pressed@pureRainAdUI.cta_face_hot": {}
+                                    },
+                                    {
+                                        "label": {
+                                            "type": "label",
+                                            "text": "确认关闭",
+                                            "layer": 27,
+                                            "anchor_from": "center",
+                                            "anchor_to": "center",
+                                            "offset": [
+                                                0,
+                                                -1
+                                            ],
+                                            "font_scale_factor": 0.8,
+                                            "shadow": false,
+                                            "color": [
+                                                1.0,
+                                                1.0,
+                                                1.0
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "main": {
+        "type": "screen",
+        "controls": [
+            {
+                "panel": {
+                    "type": "panel",
+                    "size": [
+                        "100%+0px",
+                        "100%+0px"
+                    ],
+                    "layer": 1,
+                    "controls": [
+                        {
+                            "window": {
+                                "type": "input_panel",
+                                "size": [
+                                    "100%+0px",
+                                    "100%+0px"
+                                ],
+                                "layer": 99999,
+                                "visible": false,
+                                "button_mappings": [
+                                    {
+                                        "to_button_id": "#netease_to_button_id",
+                                        "from_button_id": "button.menu_select",
+                                        "mapping_type": "pressed"
+                                    }
+                                ],
+                                "is_swallow": true,
+                                "modal": true,
+                                "controls": [
+                                    {
+                                        "dim@pureRainAdUI.flat": {
+                                            "layer": 1,
+                                            "alpha": 0.72,
+                                            "color": [
+                                                0.0,
+                                                0.0,
+                                                0.0
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "card@pureRainAdUI.card": {}
+                                    },
+                                    {
+                                        "confirm@pureRainAdUI.confirm": {}
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "entry_btn@common.button": {
+                                "type": "button",
+                                "$control_alpha": 1.0,
+                                "$default_texture": "textures/ui/nstore",
+                                "$hover_texture": "textures/ui/nstore",
+                                "$is_new_nine_slice": false,
+                                "$label_color": [
+                                    1,
+                                    1,
+                                    1
+                                ],
+                                "$label_font_scale_factor": 1.0,
+                                "$label_font_size": "large",
+                                "$label_layer": 3,
+                                "$label_offset": [
+                                    0,
+                                    0
+                                ],
+                                "$label_text": "",
+                                "$nine_slice_buttom": 0,
+                                "$nine_slice_left": 0,
+                                "$nine_slice_right": 0,
+                                "$nine_slice_top": 0,
+                                "$nineslice_size": [
+                                    0,
+                                    0,
+                                    0,
+                                    0
+                                ],
+                                "$pressed_button_name": "%netease_editor_template_namespace.click",
+                                "$pressed_texture": "textures/ui/nstore",
+                                "$texture_layer": 2,
+                                "anchor_from": "top_left",
+                                "anchor_to": "top_left",
+                                "offset": [
+                                    "5%+0px",
+                                    "5%+0px"
+                                ],
+                                "size": [
+                                    "4%+0px",
+                                    "100%x+0px"
+                                ],
+                                "draggable": "both",
+                                "layer": 999999,
+                                "button_mappings": [],
+                                "default_control": "default",
+                                "hover_control": "hover",
+                                "is_handle_button_move_event": true,
+                                "pressed_control": "pressed",
+                                "bindings": [
+                                    {
+                                        "binding_type": "collection_details",
+                                        "binding_collection_name": "",
+                                        "binding_condition": "always_when_visible"
+                                    }
+                                ],
+                                "controls": [
+                                    {
+                                        "default@netease_editor_template_namespace.default": {}
+                                    },
+                                    {
+                                        "hover@netease_editor_template_namespace.hover": {}
+                                    },
+                                    {
+                                        "pressed@netease_editor_template_namespace.pressed": {}
+                                    },
+                                    {
+                                        "button_label@netease_editor_template_namespace.button_label": {}
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

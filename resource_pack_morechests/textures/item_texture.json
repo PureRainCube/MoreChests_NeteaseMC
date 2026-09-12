@@ -1,0 +1,27 @@
+{
+  "resource_pack_name": "morechests",
+  "texture_name": "atlas.items",
+  "texture_data": {
+    "purerain_chests:wood_to_copper_chest_upgrade": {
+      "textures": "textures/items/morechests/wood_copper_upgrade"
+    },
+    "purerain_chests:wood_to_iron_chest_upgrade": {
+      "textures": "textures/items/morechests/wood_iron_upgrade"
+    },
+    "purerain_chests:copper_to_iron_chest_upgrade": {
+      "textures": "textures/items/morechests/copper_iron_upgrade"
+    },
+    "purerain_chests:iron_to_gold_chest_upgrade": {
+      "textures": "textures/items/morechests/iron_gold_upgrade"
+    },
+    "purerain_chests:gold_to_diamond_chest_upgrade": {
+      "textures": "textures/items/morechests/gold_diamond_upgrade"
+    },
+    "purerain_chests:diamond_to_crystal_chest_upgrade": {
+      "textures": "textures/items/morechests/diamond_crystal_upgrade"
+    },
+    "purerain_chests:diamond_to_obsidian_chest_upgrade": {
+      "textures": "textures/items/morechests/diamond_obsidian_upgrade"
+    }
+  }
+}

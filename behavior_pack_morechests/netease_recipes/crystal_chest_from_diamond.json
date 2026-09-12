@@ -1,0 +1,28 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "purerain_chests:crystal_chest_from_diamond"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "pattern": [
+      "GGG",
+      "GSG",
+      "GGG"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glass"
+      },
+      "S": {
+        "item": "purerain_chests:diamond_chest"
+      }
+    },
+    "result": {
+      "item": "purerain_chests:crystal_chest",
+      "count": 1
+    }
+  }
+}

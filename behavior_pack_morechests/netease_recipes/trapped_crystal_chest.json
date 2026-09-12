@@ -1,0 +1,23 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shapeless": {
+    "description": {
+      "identifier": "purerain_chests:trapped_crystal_chest"
+    },
+    "tags": [
+      "crafting_table"
+    ],
+    "ingredients": [
+      {
+        "item": "purerain_chests:crystal_chest"
+      },
+      {
+        "item": "minecraft:tripwire_hook"
+      }
+    ],
+    "result": {
+      "item": "purerain_chests:trapped_crystal_chest",
+      "count": 1
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "format_version": [
+    1,
+    1,
+    0
+  ],
+  "purerain_chests:copper_chest": {
+    "sound": "metal",
+    "textures": "purerain_chests:copper_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:copper_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:copper_chest_icon",
+      "destroyed_textures": "purerain_chests:copper_chest_icon"
+    }
+  },
+  "purerain_chests:iron_chest": {
+    "sound": "metal",
+    "textures": "purerain_chests:iron_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:iron_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:iron_chest_icon",
+      "destroyed_textures": "purerain_chests:iron_chest_icon"
+    }
+  },
+  "purerain_chests:gold_chest": {
+    "sound": "metal",
+    "textures": "purerain_chests:gold_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:gold_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:gold_chest_icon",
+      "destroyed_textures": "purerain_chests:gold_chest_icon"
+    }
+  },
+  "purerain_chests:diamond_chest": {
+    "sound": "metal",
+    "textures": "purerain_chests:diamond_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:diamond_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:diamond_chest_icon",
+      "destroyed_textures": "purerain_chests:diamond_chest_icon"
+    }
+  },
+  "purerain_chests:crystal_chest": {
+    "sound": "glass",
+    "textures": "purerain_chests:crystal_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:crystal_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:crystal_chest_icon",
+      "destroyed_textures": "purerain_chests:crystal_chest_icon"
+    }
+  },
+  "purerain_chests:obsidian_chest": {
+    "sound": "stone",
+    "textures": "purerain_chests:obsidian_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:obsidian_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:obsidian_chest_icon",
+      "destroyed_textures": "purerain_chests:obsidian_chest_icon"
+    }
+  },
+  "purerain_chests:dirt_chest": {
+    "sound": "gravel",
+    "textures": "purerain_chests:dirt_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:dirt_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:dirt_chest_icon",
+      "destroyed_textures": "purerain_chests:dirt_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_copper_chest": {
+    "sound": "metal",
+    "textures": "purerain_chests:trapped_copper_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_copper_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_copper_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_copper_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_iron_chest": {
+    "sound": "metal",
+    "textures": "purerain_chests:trapped_iron_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_iron_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_iron_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_iron_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_gold_chest": {
+    "sound": "metal",
+    "textures": "purerain_chests:trapped_gold_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_gold_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_gold_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_gold_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_diamond_chest": {
+    "sound": "metal",
+    "textures": "purerain_chests:trapped_diamond_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_diamond_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_diamond_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_diamond_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_crystal_chest": {
+    "sound": "glass",
+    "textures": "purerain_chests:trapped_crystal_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_crystal_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_crystal_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_crystal_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_obsidian_chest": {
+    "sound": "stone",
+    "textures": "purerain_chests:trapped_obsidian_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_obsidian_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_obsidian_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_obsidian_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_dirt_chest": {
+    "sound": "gravel",
+    "textures": "purerain_chests:trapped_dirt_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_dirt_chest",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_dirt_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_dirt_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_copper_chest_on": {
+    "sound": "metal",
+    "textures": "purerain_chests:trapped_copper_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_copper_chest_on",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_copper_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_copper_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_iron_chest_on": {
+    "sound": "metal",
+    "textures": "purerain_chests:trapped_iron_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_iron_chest_on",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_iron_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_iron_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_gold_chest_on": {
+    "sound": "metal",
+    "textures": "purerain_chests:trapped_gold_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_gold_chest_on",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_gold_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_gold_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_diamond_chest_on": {
+    "sound": "metal",
+    "textures": "purerain_chests:trapped_diamond_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_diamond_chest_on",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_diamond_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_diamond_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_crystal_chest_on": {
+    "sound": "glass",
+    "textures": "purerain_chests:trapped_crystal_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_crystal_chest_on",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_crystal_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_crystal_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_obsidian_chest_on": {
+    "sound": "stone",
+    "textures": "purerain_chests:trapped_obsidian_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_obsidian_chest_on",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_obsidian_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_obsidian_chest_icon"
+    }
+  },
+  "purerain_chests:trapped_dirt_chest_on": {
+    "sound": "gravel",
+    "textures": "purerain_chests:trapped_dirt_chest_icon",
+    "client_entity": {
+      "identifier": "purerain_chests:trapped_dirt_chest_on",
+      "hand_model_use_client_entity": true,
+      "block_icon": "purerain_chests:trapped_dirt_chest_icon",
+      "destroyed_textures": "purerain_chests:trapped_dirt_chest_icon"
+    }
+  }
+}
